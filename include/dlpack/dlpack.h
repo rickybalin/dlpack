@@ -108,7 +108,7 @@ typedef enum {
     /*! \brief Boolean */
   kDLBool = 6U,
     /*! \brief String type (every element is a null-terminated encoded string) */
-  kDLString = 6U,
+  kDLString = 7U,
 } DLDataTypeCode;
 
 /*!
