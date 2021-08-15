@@ -107,6 +107,8 @@ typedef enum {
   kDLComplex = 5U,
     /*! \brief Boolean */
   kDLBool = 6U,
+    /*! \brief String type (every element is a null-terminated encoded string) */
+  kDLString = 6U,
 } DLDataTypeCode;
 
 /*!
@@ -173,6 +175,8 @@ typedef struct {
   int64_t* strides;
   /*! \brief The offset in bytes to the beginning pointer to data */
   uint64_t byte_offset;
+  /*! \brief The length (in bytes) of every element in the tensor (currently only relevant for string tensors) */
+  uint64_t* elements_length;
 } DLTensor;
 
 /*!
