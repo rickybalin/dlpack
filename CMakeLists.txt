@@ -3,6 +3,7 @@
 # VERSION sub-option we need at least 3.0.
 # Note: If you use 2.6 or 2.4, God kills a kitten. Seriously.
 cmake_minimum_required(VERSION 3.2 FATAL_ERROR)
+cmake_policy(SET CMP0074 NEW)
 
 ####
 # Set variables:
@@ -37,9 +38,9 @@ endif(NOT CMAKE_BUILD_TYPE)
 # Note: not working on CMake 2.8. We assume that user has
 #       a compiler with C++11 support.
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-message(STATUS "C++11 support has been enabled by default.")
+message(STATUS "C++17 support has been enabled by default.")
 
 option(BUILD_DOCS "Set to ON to build documentation" OFF)
 option(BUILD_MOCK "Build mock executable" ON)
